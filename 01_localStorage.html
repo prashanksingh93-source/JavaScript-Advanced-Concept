@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <form id='form' action="">
+           name : <input type="text" id="text">
+            <input type="submit">
+        </form>
+    </div>
+    
+    <script>
+        let v=localStorage.getItem('name')
+        if(v){
+            document.getElementById('text').value = v
+            console.log(v)
+        }
+
+        document.querySelector('#form').addEventListener('submit',(e)=>{
+        e.preventDefault();
+        let value=document.querySelector('#text').value
+        localStorage.setItem('name',value)
+        })
+         
+       
+
+    </script>
+</body>
+</html>
