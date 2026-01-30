@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+</head>
+<body>
+    <script>
+        try{
+            let a=10;
+            let b=2;
+            let c=a/b;
+            console.log(c)
+        }
+        catch(error){
+            console.log('error')
+        }
+
+        //Throwing Custom Errors
+
+        function divide(a, b) {
+  if (b === 0) {
+    throw new Error('Cannot divide by zero');
+  }
+  return a / b;
+}
+
+try {
+  divide(5, 0);
+} catch (error) {
+  console.error(error.message); // Output: Cannot divide by zero
+}
+    </script>
+</body>
+</html>
